@@ -1,3 +1,6 @@
+## Escritor UFM es la aplicación web de Escritor para la Universidad Francisco Marroquín.
+Creada por Andrea Dardón. Diciembre 2014.
+
 == README
 
 This README would normally document whatever steps are necessary to get the
