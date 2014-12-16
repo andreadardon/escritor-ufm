@@ -9,4 +9,6 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-EscritorUfm::Application.config.secret_key_base = '856ab2c83c6ebd74167216f2e17345d3c5c78853f00065ca28ae3fe2ab6e335a5a7830d004717eb4c8af2776601adc683d872b1a8f4fc35552b0cace128e67f1'
+
+#EscritorUfm::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
+EscritorUfm::Application.config.secret_key_base = '905acb12b6653e008e8a73d16bc87004b7c26114fcc8538ee03b4e41b42d011686739989c6f163a33729908c8b5de71cf10ae63a32196f8337373f31764443b3'

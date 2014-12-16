@@ -1,10 +1,4 @@
-# Load the Rails application.
-require File.expand_path('../application', __FILE__)
-
-# Initialize the Rails application.
-EscritorUfm::Application.initialize!
-
-#if Rails.env.development?
+if Rails.env.development?
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     address:        'smtp.sendgrid.net',
@@ -14,6 +8,5 @@ EscritorUfm::Application.initialize!
     password:       ENV['SENDGRID_PASSWORD'],
     domain:         'heroku.com',
     enable_starttls_auto: true
-  }
-#end
-
+ }
+end

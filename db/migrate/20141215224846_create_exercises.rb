@@ -9,3 +9,4 @@ class CreateExercises < ActiveRecord::Migration
     end
   end
 end
+
