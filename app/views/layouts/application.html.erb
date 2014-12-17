@@ -10,9 +10,19 @@
      <div class="container">
        <ul>
        <ul class="nav nav-tabs">
-        <li><%= link_to "Escritor-UFM", welcome_index_path %></li>
+        <li><%= link_to "Escritor UFM", welcome_index_path %></li>
         <li><%= link_to "Acerca De", welcome_about_path %></li>
+        <li><%= link_to "Cursos", weeks_path %></li>
       </ul>
+
+      <div class="pull-right user-info">
+        <% if current_user %>
+        ¡Hola <%= current_user.name %>! <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to "Iniciar Sesión", new_user_session_path %> o 
+        <%= link_to "Regístrate", new_user_registration_path %>
+        <% end %>
+         </div>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

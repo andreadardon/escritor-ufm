@@ -1,2 +1,39 @@
-<h1>Bienvenidos a Escritor-UFM</h1>
-<p>Esta es la página principal</p>
+
+
+<h1>Escritor UFM</h1>
+  <p>¡Realiza ejercicios y conviértete en un mejor escritor!</p>
+  <p>
+      <%= link_to "Inicia sesión", new_user_session_path, class: 'btn btn-primary' %> 
+      <%= link_to "Regístrate", new_user_registration_path, class: 'btn btn-primary' %> </p>
+</div>
+
+
+<!--h2>Inicia Sesión</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <%# resource= User.new %>
+    <%#= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+        <%#= f.label :email %>
+        <%#= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Ingresa tu correo electrónico" %>
+      </div>
+      <div class="form-group">
+        <%#= f.label :password %>
+        <%#= f.password_field :password, class: 'form-control', placeholder: "Ingresa tu contraseña" %>
+      </div>
+      <div class="form-group">
+        <%# if devise_mapping.rememberable? %>
+          <%#= f.label :remember_me, class: 'checkbox' do %>
+            <%#= f.check_box :remember_me %> Remember me
+          <%# end %>
+        <%# end %>
+        <%#= f.submit "Inicia Sesión", class: 'btn btn-success' %>
+      </div>
+      <div class="form-group">
+        <%#= render "devise/shared/links" %>
+      </div>
+    <%# end %>
+  </div>
+</div-->

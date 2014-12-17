@@ -1,5 +1,11 @@
 EscritorUfm::Application.routes.draw do
   devise_for :users
+
+    resources :weeks do
+    resources :exercises 
+  end
+  resources :answers
+  
   get "welcome/index"
   get "welcome/about"
 

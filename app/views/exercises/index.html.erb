@@ -1,0 +1,10 @@
+<h1>Ejercicios</h1>
+<% @exercises.each do |exercise| %>
+  <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to exercise.title, exercise %>
+       </h4>
+     </div>
+   </div>
+<% end %>

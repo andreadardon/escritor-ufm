@@ -43,6 +43,137 @@ Week.create(
   )
 
 
+#Semana 1
 
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Escribe una historia de 100 palabras que comience con 'El león lo observaba.' ",
+  week_id: 1
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Escribe una historia de 100 palabras que comience con 'El león lo observaba.' ",
+  week_id: 1,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Escribe una historia de 100 palabras que comience con 'El león lo observaba.' ",
+  week_id: 1,
+  previous_exercise_id: e.id
+  )
+
+#Semana 2
+
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Escribe un ensayo sobre la familia y la sociedad.",
+  week_id: 2
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Escribe un ensayo sobre la familia y la sociedad.",
+  week_id: 2,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Escribe un ensayo sobre la familia y la sociedad.",
+  week_id: 2,
+  previous_exercise_id: e.id
+  )
+
+#Semana 3
+
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Describe un día de campo.",
+  week_id: 3
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Describe un día de campo.",
+  week_id: 3,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Describe un día de campo.",
+  week_id: 3,
+  previous_exercise_id: e.id
+  )
+
+#Semana 4
+
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Defiende tu ideología política.",
+  week_id: 4
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Defiende tu ideología política.",
+  week_id: 4,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Defiende tu ideología política.",
+  week_id: 4,
+  previous_exercise_id: e.id
+  )
+
+#Semana 5
+
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Escribe un artículo de opinión sobre cualquier tema",
+  week_id: 5
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Escribe un artículo de opinión sobre cualquier tema",
+  week_id: 5,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Escribe un artículo de opinión sobre cualquier tema",
+  week_id: 5,
+  previous_exercise_id: e.id
+  )
+
+#Semana 6
+
+e = Exercise.create(
+  title: "Ejercicio 1",
+  instructions: "Escribe una historia ambientada en el Siglo XIX.",
+  week_id: 6,
+  previous_exercise_id: e.id
+  )
+
+e =  Exercise.create(
+  title: "Ejercicio 2",
+  instructions: "Escribe una historia ambientada en el Siglo XIX.",
+  week_id: 6,
+  previous_exercise_id: e.id
+  )
+
+e = Exercise.create(
+  title: "Ejercicio 3",
+  instructions: "Escribe una historia ambientada en el Siglo XIX.",
+  week_id: 6,
+  previous_exercise_id: e.id
+  )
 
 
