@@ -1,4 +1,5 @@
 class WeeksController < ApplicationController
+  before_action :authenticate_user!
 def index
     @weeks = Week.all
   end
