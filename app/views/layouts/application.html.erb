@@ -53,9 +53,16 @@
 
 <body id="page-top" class="index">
 
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
+                <% if current_user %>
+        ¡Hola <%= current_user.name %>! <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to "Iniciar Sesión", new_user_session_path %> o 
+        <%= link_to "Regístrate", new_user_registration_path %>
+        <% end %>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -90,19 +97,16 @@
     </nav>
 
       <div class="pull-right user-info">
-        <% if current_user %>
-        ¡Hola <%= current_user.name %>! <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
-        <% else %>
-        <%= link_to "Iniciar Sesión", new_user_session_path %> o 
-        <%= link_to "Regístrate", new_user_registration_path %>
-        <% end %>
+
          </div>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+<div class="container">
+          <%= yield %>
+</div>
 
-      <%= yield %>
      </div>
 
   </body>
