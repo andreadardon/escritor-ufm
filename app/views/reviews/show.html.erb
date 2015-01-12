@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style media="screen" type="text/css">
+
+
+#respuesta {
+  padding-bottom: 150px;
+  padding-top: 20px;
+}
+
+.recursos {
+  background: #333333;
+}
+
+.recursos a, a:hover, a:focus, a:active, a.active {
+  color: #fff; 
+}
+
+
+</style>
+
+</head>
+
+<div class="container" id="respuesta">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2" id="reviews">
+      <% @review = Review.find(params[:id]) %>
+      <h1><%= @review.answer.exercise.title %></h1>
+      <p><%= @review.body.html_safe%></p>
+    </div>
+  </div>
+</div>
+
+   <section class="recursos">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/answers">Tus respuestas</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/reviews">Ejercicios revisados</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="http://foro.ufm.escritor.co/">Foro</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>

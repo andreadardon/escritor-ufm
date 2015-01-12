@@ -9,9 +9,63 @@ p {text-align: center;
     margin-top: 100px;
     }
 
+.review {
+  padding-bottom: 75px;
+}
+
+.recursos {
+  background: #333333;
+}
+
+.recursos a, a:hover, a:focus, a:active, a.active {
+  color: #fff; 
+}
+
 </style>
 
 </head>
 
-<% @answer = Answer.find(params[:id]) %>
-<p><%= @answer.body %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <% @answer = Answer.find(params[:id]) %>
+      <h2><%= @answer.exercise.title %></h2>
+    </div>
+  </div>
+</div>
+
+<section class="review">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <%= form_for Review.new do |f| %>
+      <%= f.text_area :body, value: @answer.body, rows: 10 %>
+      <%= f.hidden_field :answer_id, value: @answer.id %>
+      <%= f.submit "Enviar" %>
+      <% end %>
+        <script>
+        CKEDITOR.replace("review_body");
+        </script>
+    </div>
+  </div>
+</div>
+</section>
+
+
+   <section class="recursos">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/answers">Tus respuestas</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/reviews">Ejercicios revisados</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="http://foro.ufm.escritor.co/">Foro</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>

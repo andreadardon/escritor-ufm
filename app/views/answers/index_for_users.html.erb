@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style media="screen" type="text/css">
+
+
+
+#answer {
+  padding-bottom: 50px;
+}
+
+.recursos {
+  background: #333333;
+}
+
+.recursos a, a:hover, a:focus, a:active, a.active {
+  color: #fff; 
+}
+
+</style>
+
+</head>
+ 
+<div class="container" id= "title">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h1> Tus respuestas</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container" id= "answer">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <ul>
+        <% current_user.answers.each do |a| %>
+          <li><%= a.exercise.title %></li>
+            <%= a.body.html_safe %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+   <section class="recursos">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/answers">Tus respuestas</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/reviews">Ejercicios revisados</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="http://foro.ufm.escritor.co/">Foro</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>

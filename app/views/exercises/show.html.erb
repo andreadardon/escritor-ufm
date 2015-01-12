@@ -5,33 +5,87 @@
 
 h1 {text-align: center;
     vertical-align: middle;
-    margin-top: 150px;
+    margin-top: -30px;
     }
 
-p {text-align: center;
-    vertical-align: middle;
-    }
+p { margin-top: 30px;
+    margin-bottom: 10px;
+}
 
-.text_area {text-align: center;
-            vertical-align: middle;
-            margin-left: 150px;
-  }
+.ejercicio {
+  padding-bottom: 75px; 
+}
+
+.recursos {
+  background: #333333;
+}
+
+.recursos a, a:hover, a:focus, a:active, a.active {
+  color: #fff; 
+}
 
 </style>
 
 </head>
 <!-- say waht '@exercise' is -->
+
 <% @exercise = Exercise.find(params[:id]) %>
+<div class="container">
+  <div class="row">
+    <div class=".col-xs-6 .col-md-4">
+      <h1><%= @exercise.title %></h1>
+    </div>
+  </div>
+</div>
 
-<h1><%= @exercise.title %></h1>
-<p><%= @exercise.instructions %></p>
 
-  <%= form_for @answer do |f| %>
-    <%= f.text_area(:body, {style: "width: 600px; height: 400px;"}) %>
-    <%= f.hidden_field(:exercise_id, value: @exercise.id) %>
-    <%= f.submit "Guardar" %>
-  <% end %>
-<% foo = Exercise.find(@exercise.id + 1) %>
+<div class="container">
+  <div class="row">
+    <div class=".col-xs-6 .col-sm-4">
+        <p><%= @exercise.instructions %></p>
+    </div>
+  </div>
+</div>
+
+<section class="ejercicio">
+<div class="container">
+  <div class="row">
+    <div class=".col-xs-6 .col-sm-4">
+           <%= form_for @answer do |f| %>
+             <%= f.text_area(:body, {style: "width: 600px; height: 400px;"}) %>
+             <%= f.hidden_field(:exercise_id, value: @exercise.id) %>
+             <%= f.submit "Guardar" %>
+           <% end %>
+
+            <script>
+              $(document).ready(function() {
+                  $('body').bind('copy paste',function(e) {
+                    e.preventDefault();  
+                    return false; 
+                  });
+            </script>
+    </div>
+  </div>
+</div>
+</section>
+
+   <section class="recursos">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/answers">Tus respuestas</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="/reviews">Ejercicios revisados</a></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 text-center">
+                    <h4 class= "links"><a href="http://foro.ufm.escritor.co/">Foro</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>
 <%#= link_to "Siguiente ejercicio", course_exercise_path(Course.first, foo )%>
 
 

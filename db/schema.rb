@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150108155411) do
+ActiveRecord::Schema.define(version: 20150108174422) do
 
   create_table "answers", force: true do |t|
     t.text     "body"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20150108155411) do
   end
 
   add_index "exercises", ["week_id"], name: "index_exercises_on_week_id"
+
+  create_table "reviews", force: true do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["answer_id"], name: "index_reviews_on_answer_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

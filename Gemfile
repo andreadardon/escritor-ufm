@@ -5,6 +5,8 @@ gem 'rails', '4.0.1'
 
 gem 'bootstrap-sass'#, '~> 3.1.1'
 # Use sqlite3 as the database for Active Record
+gem 'ckeditor'  
+
 
 
 group :production do

@@ -3,6 +3,8 @@
 /*@import "bootstrap-sprockets";*/
 @import "bootstrap";
 
+/*  */
+
 
 
 
@@ -15,7 +17,7 @@
 
 body {
     overflow-x: hidden;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 p {
@@ -32,7 +34,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #ffffff;
 }
 
 h1,
@@ -172,8 +174,12 @@ header .intro-text .skills {
    color: #fff;
 }
 
+.links { 
+  color: #fff;
+}
+
 a, a:hover, a:focus, a:active, a.active {
-  color: #18bc9c; 
+  color: #008C9E; 
 }
 
 .navbar a:focus {
@@ -192,6 +198,12 @@ a, a:hover, a:focus, a:active, a.active {
 .navbar-inverse {
     border: 0;
     background-color: #E5003C;
+}
+
+.hola {
+    font-size: 14px;
+    color: #E8BF56;
+    line-height: 0px;
 }
 
 section {
@@ -362,7 +374,7 @@ footer h3 {
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 75px;
     background: -webkit-linear-gradient(left,rgba(54,186,194,0.9) 0,rgba(60,211,173,0.9) 100%);
 }
 

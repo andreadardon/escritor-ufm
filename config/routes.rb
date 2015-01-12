@@ -2,10 +2,14 @@ EscritorUfm::Application.routes.draw do
   devise_for :users
   
   resources :weeks do
-    resources :exercises 
+    resources :exercises do 
+      get "complete", to: "exercises#complete", on: :collection
+    end 
   end
   
   resources :answers
+
+  resources :reviews
   
   get "welcome/index"
   get "welcome/about"
