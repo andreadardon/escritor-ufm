@@ -12,6 +12,8 @@ p { margin-top: 30px;
     margin-bottom: 10px;
 }
 
+// Classes
+
 .ejercicio {
   padding-bottom: 75px; 
 }
@@ -41,7 +43,7 @@ p { margin-top: 30px;
 
 <div class="container">
   <div class="row">
-    <div class=".col-xs-6 .col-sm-4">
+    <div class="col-md-6 col-md-offset-3 text-center">
         <p><%= @exercise.instructions %></p>
     </div>
   </div>
@@ -50,7 +52,7 @@ p { margin-top: 30px;
 <section class="ejercicio">
 <div class="container">
   <div class="row">
-    <div class=".col-xs-6 .col-sm-4">
+    <div class="col-md-6 col-md-offset-3 text-left">
            <%= form_for @answer do |f| %>
              <%= f.text_area(:body, {style: "width: 600px; height: 400px;"}) %>
              <%= f.hidden_field(:exercise_id, value: @exercise.id) %>
